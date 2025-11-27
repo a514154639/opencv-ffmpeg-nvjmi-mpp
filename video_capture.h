@@ -69,16 +69,14 @@ private:
     jmi::nvPacket nvpacket;
     jmi::nvFrameMeta nvframe_meta;
     std::queue<cv::Mat> frame_queue;
-    //string _filename;
     
 
 };
-std::string getcurrent_time();
+
 extern "C" void Init_uri(int i, const char * uri);
 extern "C" bool isConnect(int i);
-//extern "C" void Getbyte(unsigned char *image,int i);
 extern "C" void reConnect(int i);
-extern "C" int Getbyte( int i,int& width, int& height, int& size, unsigned char*& data);
-//extern "C" int Getbyte( int i, cv::Mat **returnframe);
+extern "C" int Getbyte_( int i,int& width, int& height, int& size, unsigned char*& data);
+extern "C" int Getbyte( int i,int& width, int& height, int& size, cv::Mat** returnframe);
 
 
